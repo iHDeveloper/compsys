@@ -4,12 +4,12 @@ defmodule CompSys.Entity do
   Client API for interacting with Entity agent
   """
 
-  @spec start_link() :: {:error, nil} | {:ok, pid}
+  @spec start_link(any) :: {:error, nil} | {:ok, any}
   @doc """
   Start a new entity
   """
-  def start_link() do
-    {state, entity} = Agent.start_link(fn -> %{} end)
+  def start_link(opts \\ []) do
+    {state, entity} = Agent.start_link(fn -> %{} end, opts)
     if state == :ok do
       {:ok, entity}
     else

@@ -1,10 +1,10 @@
 defmodule CompSysTest.Entity do
   alias CompSys.Entity
-  use ExUnit.Case, async: true
+  use ExUnit.Case, async: false
   doctest Entity
 
   setup do
-    {:ok, entity} = Entity.start_link()
+    entity = start_supervised!(Entity)
     %{entity: entity}
   end
 

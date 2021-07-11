@@ -45,7 +45,7 @@ defmodule CompSys.Entity.Registry do
     if Map.has_key?(names, name) do
       {:noreply, names}
     else
-      {:ok, entity} = Entity.start_link()
+      {:ok, entity} = Entity.start_link([])
       {:noreply, Map.put(names, name, entity)}
     end
   end
