@@ -1,6 +1,6 @@
-defmodule Compsys do
+defmodule CompSys do
   @moduledoc """
-  Documentation for `Compsys`.
+  Documentation for `CompSys`.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule Compsys do
 
   ## Examples
 
-      iex> Compsys.hello()
+      iex> CompSys.hello()
       :world
 
   """

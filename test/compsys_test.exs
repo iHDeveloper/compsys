@@ -1,8 +1,7 @@
-defmodule CompsysTest do
+defmodule CompSysTest do
   use ExUnit.Case
-  doctest Compsys
-
+  doctest CompSys
   test "greets the world" do
-    assert Compsys.hello() == :world
+    assert CompSys.hello() == :world
   end
 end

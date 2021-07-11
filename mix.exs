@@ -1,4 +1,4 @@
-defmodule Compsys.MixProject do
+defmodule CompSys.MixProject do
   use Mix.Project
 
   def project do
