@@ -3,16 +3,19 @@ defmodule CompSys do
   Documentation for `CompSys`.
   """
 
+  @spec launch :: :ok
   @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> CompSys.hello()
-      :world
-
+  Launches the component system supervisors
   """
-  def hello do
-    :world
+  def launch do
+    :ok
+  end
+
+  @spec destroy :: :ok
+  @doc """
+  Destroyes the component system supervisors
+  """
+  def destroy do
+    :ok
   end
 end
