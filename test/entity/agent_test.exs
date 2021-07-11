@@ -4,7 +4,7 @@ defmodule CompSysTest.Entity do
   doctest Entity
 
   setup do
-    {:ok, entity} = Entity.start_link("test-subject")
+    {:ok, entity} = Entity.start_link()
     %{entity: entity}
   end
 
