@@ -17,4 +17,10 @@ defmodule CompSysTest.Entity.Registry do
     Entity.put(entity, :op, true)
     assert true = Entity.get(entity, :op)
   end
+
+  test "remove entity on exit", %{registry: registry} do
+    entity = Registry.create(registry, "iHDeveloper")
+    Agent.stop(entity)
+    assert Registry.lookup(registry, "iHDeveloper") == :error
+  end
 end
